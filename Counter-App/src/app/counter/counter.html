@@ -1,0 +1,19 @@
+<div class="counter-container">
+  <h1>Counter: {{ counter }}</h1>
+  <button (click)="decrement()">Decrement</button>
+  <button (click)="increment()">Increment</button>
+
+  <br>
+
+  @switch (getCounterStatus().status) {
+    @case ('positive') {
+      <span class="counter-status positive">The counter is positive</span>
+    }
+    @case ('negative') {
+      <span class="counter-status negative">The counter is negative</span>
+    }
+    @default {
+      <span class="counter-status neutral">The counter is neutral</span>
+    }
+  }
+</div>
